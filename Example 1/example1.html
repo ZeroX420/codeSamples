@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Example 1</title>
+        <script src="exampleJS.js"></script>
+
+        <style>
+
+            html{
+
+                background-color: #428e4e;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .contenedorCentral{
+
+                background-color: lightblue;
+                width: 900px;
+                height: 700px;
+                z-index: 20;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .numeros, #orden{
+
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                box-sizing: border-box;
+                margin-bottom: 15px;
+            }
+
+            #botonValidar{
+                
+                width: 80px;
+                height: 30px;
+            }
+
+            ul{
+
+                list-style-position: inside;
+                text-align: center;
+                font-family: Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+
+        <div class="contenedorCentral">
+
+            <div style="text-align: center; font-family: Helvetica, sans-serif;">
+            
+                <h1>EXAMPLE 1</h1>
+
+            </div>
+
+            <div style="text-align: center; font-family: Helvetica, sans-serif;">
+                <label>Number 1: </label>
+                <input id="input1" class="numeros" type="text">
+                <br>
+
+                <label>Number 2: </label>
+                <input id="input2" class="numeros" type="text">
+                <br>
+
+                <label>Number 3: </label>
+                <input id="input3" class="numeros" type="text">
+                <br>
+
+                <label>Number 4: </label>
+                <input id="input4" class="numeros" type="text">
+                <br>
+
+                <label>Number 5: </label>
+                <input id="input5" class="numeros" type="text">
+                <br>
+
+                <label>Number 6: </label>
+                <input id="input6" class="numeros" type="text">
+                <br>
+
+            </div>
+
+            <br>
+
+            <div>
+
+                <label style="text-align: center; font-family: Helvetica, sans-serif;">Select the order of the numbers: </label>
+                <select id="orden">
+
+                    <option value=""></option>
+                    <option value="ASCENDING">ASCENDING</option>
+                    <option value="DESCENDING">DESCENDING</option>
+
+                </select>
+
+            </div>
+
+            <br>
+
+            <button id="botonValidar" onclick="validar()">Validate</button>
+
+            <div style="margin-top: 20px;">
+
+                <label id="modoOrden" style="text-align: center; font-family: Helvetica, sans-serif;"></label>
+
+                <ul id="listaNumerosOrdenados"></ul>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
